@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+</head>
+<body>
+<form action="/updateinfo/" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="updateImg">
+        <img src="{{ account.photo.url }}" alt=""/></div>
+
+    <input name="photo" type="file" id="exampleInputFile">
+    <br>
+    <label for="tag">Description:</label>
+    <input type="text" id="tag" name="tag">
+    <br>
+    <button id="photo" class="btn btn-danger" type="submit">上传图片</button>
+</form>
+</body>
+</html>
